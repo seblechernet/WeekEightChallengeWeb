@@ -33,6 +33,7 @@ function generateTable(cars) {
     var tblBody = document.createElement("tbody");
 
     // creating all cells
+
     for (var i = 0; i < cars.length; i++) {
         // creates a table row
 
@@ -54,7 +55,10 @@ function generateTable(cars) {
         cell.appendChild(cellText);
         row.appendChild(cell);
         var cell = document.createElement("td");
-        cell.innerHTML='<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="deleteCars()">Delete</button></span>';
+
+
+        var car="cars["+ i + "]";
+        cell.innerHTML='<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="deleteCars(' + car + ')">Delete</button></span>';
         row.appendChild(cell);
         var cell = document.createElement("td");
         cell.innerHTML='<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="editCars()">Edit</button></span>';
@@ -62,7 +66,8 @@ function generateTable(cars) {
 
         // add the row to the end of the table body
         tblBody.appendChild(row);
-    }
+
+            }
 
     // put the <tbody> in the <table>
     tbl.appendChild(tblBody);

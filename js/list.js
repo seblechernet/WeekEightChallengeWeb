@@ -61,7 +61,7 @@ function generateTable(cars) {
         cell.innerHTML='<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="deleteCars(' + car + ')">Delete</button></span>';
         row.appendChild(cell);
         var cell = document.createElement("td");
-        cell.innerHTML='<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="editCars()">Edit</button></span>';
+        cell.innerHTML='<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="editCars(' + car + ')">Edit</button></span>';
         row.appendChild(cell);
 
         // add the row to the end of the table body
